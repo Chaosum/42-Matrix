@@ -14,6 +14,11 @@ namespace MatrixExercises.Vectors
             this.data = data;
         }
 
+        public Vector(Vector<K> data)
+        {
+            this.data = new List<K>(data.data);
+        }
+
         // Retourne la taille du vecteur
         public int Size()
         {
@@ -73,6 +78,12 @@ namespace MatrixExercises.Vectors
             }
         }
 
+        // Affichage
+        public override string ToString()
+        {
+            return "[" + string.Join(", ", data) + "]";
+        }
+
         public void add(Vector<K> v)
         {
             if (v.data.Count != data.Count)
@@ -104,11 +115,22 @@ namespace MatrixExercises.Vectors
                 data[i] = (dynamic)data[i] * scalar;
             }
         }
-
-        // Affichage
-        public override string ToString()
+        public static Vector<K> LinearCombination<K>(List<Vector<K>> vectors, List<K> coefs)
         {
-            return "[" + string.Join(", ", data) + "]";
+            if (vectors.Count != coefs.Count)
+                throw new ArgumentException("The number of vectors must match the number of coefficients");
+
+            Vector<K> result = new (vectors[0]);
+            result.scale(coefs[0]);
+            // Additionner les vecteurs multipliés par les coefficients
+            for (int i = 1; i < vectors.Count; i++)
+            {
+                Vector<K> tempVector = new Vector<K>(vectors[i]);
+                tempVector.scale(coefs[i]);
+                result.add(tempVector);
+            }
+            return result;
         }
+
     }
 }
