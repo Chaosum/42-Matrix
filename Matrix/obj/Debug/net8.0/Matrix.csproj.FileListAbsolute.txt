@@ -1,0 +1,14 @@
+/home/mservage/Documents/42-Matrix/Matrix/bin/Debug/net8.0/Matrix
+/home/mservage/Documents/42-Matrix/Matrix/bin/Debug/net8.0/Matrix.deps.json
+/home/mservage/Documents/42-Matrix/Matrix/bin/Debug/net8.0/Matrix.runtimeconfig.json
+/home/mservage/Documents/42-Matrix/Matrix/bin/Debug/net8.0/Matrix.dll
+/home/mservage/Documents/42-Matrix/Matrix/bin/Debug/net8.0/Matrix.pdb
+/home/mservage/Documents/42-Matrix/Matrix/obj/Debug/net8.0/Matrix.GeneratedMSBuildEditorConfig.editorconfig
+/home/mservage/Documents/42-Matrix/Matrix/obj/Debug/net8.0/Matrix.AssemblyInfoInputs.cache
+/home/mservage/Documents/42-Matrix/Matrix/obj/Debug/net8.0/Matrix.AssemblyInfo.cs
+/home/mservage/Documents/42-Matrix/Matrix/obj/Debug/net8.0/Matrix.csproj.CoreCompileInputs.cache
+/home/mservage/Documents/42-Matrix/Matrix/obj/Debug/net8.0/Matrix.dll
+/home/mservage/Documents/42-Matrix/Matrix/obj/Debug/net8.0/refint/Matrix.dll
+/home/mservage/Documents/42-Matrix/Matrix/obj/Debug/net8.0/Matrix.pdb
+/home/mservage/Documents/42-Matrix/Matrix/obj/Debug/net8.0/Matrix.genruntimeconfig.cache
+/home/mservage/Documents/42-Matrix/Matrix/obj/Debug/net8.0/ref/Matrix.dll
