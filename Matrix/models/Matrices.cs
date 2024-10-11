@@ -10,11 +10,14 @@ namespace models.Matrices
     {
         private List<List<K>> data;
 
+#region constructeur
         public Matrix(List<List<K>> data)
         {
             this.data = data;
         }
+#endregion constructeur
 
+#region utilities
         /// <summary>
         /// Return the shape of the matrix (row, column)
         /// </summary>
@@ -96,6 +99,21 @@ namespace models.Matrices
                 throw new ArgumentOutOfRangeException("Index hors limites");
             }
         }
+
+        public List<K> this[int i]
+        {
+            get
+            {
+                if (i < 0 || i >= data.Count)
+                {
+                    throw new IndexOutOfRangeException("L'indice de la ligne est hors limites.");
+                }
+                return data[i];
+            }
+        }
+#endregion utilities
+
+#region add sub scale
         /// <summary>
         /// Add a matric to the matrix
         /// both matrix MUST have the same size
@@ -156,5 +174,34 @@ namespace models.Matrices
                 }
             }
         }
+#endregion add sub scale
+
+#region linear map matrix multiplication 
+        public Matrix<K> mul_mat(Matrix<K> mat)
+        {
+            (int rowA,int colA) = this.Shape();
+            (int rowB, int colB) = mat.Shape();
+            if (colA != rowB){
+                throw new ArgumentException("the number of col in the first matrix must be equel to the number of lines of the second matrix.");
+            }
+            List<List<K>> resultList = new List<List<K>>();
+            for (int i = 0; i < rowA; i++)
+            {
+                List<K> lineResult = new List<K>();
+                for (int j = 0; j < colB; j++)
+                {
+                    dynamic current = default(K);
+                    for (int k = 0; k < colA; k++)
+                    {
+                        current += (dynamic)this[i][k] * (dynamic)mat[k][j];
+                    }
+                    lineResult.Add(current);
+                }
+                resultList.Add(lineResult);
+            }
+            Matrix<K> result = new Matrix<K> (resultList);
+            return result;
+        }
+#endregion linear map matrix multiplication    
     }
 }
