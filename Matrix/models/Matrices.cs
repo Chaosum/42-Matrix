@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MatrixExercises.Vectors;
-using MatrixExercises.Matrices;
+using models.Vectors;
+using models.Matrices;
 
-namespace MatrixExercises.Matrices
+namespace models.Matrices
 {
     public class Matrix<K>
     {

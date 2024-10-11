@@ -4,6 +4,11 @@ public class Complex
     public float Imaginary { get; set; }
 
     // Constructeur
+    public Complex()
+    {
+        Real = 0;
+        Imaginary = 0;
+    }
     public Complex(float real, float imaginary)
     {
         Real = real;
@@ -66,5 +71,14 @@ public class Complex
     public override string ToString()
     {
         return $"{Real} + {Imaginary}i";
+    }
+
+    public Complex Conjugate()
+    {
+        return new Complex(this.Real, -this.Imaginary);
+    }
+    public float Abs()
+    {
+        return (float)Math.Sqrt(Real * Real + Imaginary * Imaginary);
     }
 }

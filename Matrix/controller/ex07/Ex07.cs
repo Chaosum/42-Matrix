@@ -1,13 +1,13 @@
-using MatrixExercises.Vectors;
-using MatrixExercises.Matrices;
+using models.Vectors;
+using models.Matrices;
 
-namespace MatrixExercises.Ex12
+namespace controller.Ex07
 {
-    public class Ex12
+    public class Ex07
     {
         public static void Run()
         {
-            Console.WriteLine("Exécution de l'exercice 12");
+            Console.WriteLine("Exécution de l'exercice 07");
 
             // Création d'un vecteur
             var vector = new Vector<float>(new List<float> { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f });
